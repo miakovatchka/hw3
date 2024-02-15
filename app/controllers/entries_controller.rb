@@ -14,7 +14,8 @@ end
 
 def create
 @entries = Entry.new
-  @entries["name"] = params["name"]
+  @entries["title"] = params["title"]
+  @entries["description"] = params["description"]
   @entries["created_at"] = params["created_at"]
   @entries["updated_at"] = params["updated_at"]
   @entries.save

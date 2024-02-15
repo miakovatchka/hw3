@@ -3,9 +3,11 @@
 <%= form_with model: @entries do |form| %>
   <p>
     <%= form.label "title" %>
+    <%= form.text_field "title" %>
+    </p>
+    <p>
+    <%= form.label "description" %>
     <%= form.text_field "description" %>
-    <%= form.label "posted_on" %>
-    <%= form.text_field "updated_at" %>
   </p>
   
   <%= form.submit %>
