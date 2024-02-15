@@ -1,0 +1,12 @@
+<h1>New Post</h1>
+
+<%= form_with model: @entries do |form| %>
+  <p>
+    <%= form.label "title" %>
+    <%= form.text_field "description" %>
+    <%= form.label "posted_on" %>
+    <%= form.text_field "updated_at" %>
+  </p>
+  
+  <%= form.submit %>
+<% end %>

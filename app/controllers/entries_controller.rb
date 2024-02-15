@@ -9,6 +9,7 @@ end
 
 def new 
   @entries = Entry.new
+  @entries["place_id"] = params["place_id"]
 end
 
 def create
