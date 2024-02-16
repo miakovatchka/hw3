@@ -1,1 +1,16 @@
-<h1><%= @places.name %></h1>
+<h1>Entries</h1>
+<p>
+<ul>
+<% for entry in @entries %>
+<li><%= entry.title %></li>
+<li><%= entry.description %></li>
+<li><%=entry.posted_on %></li>
+<% end %>
+</ul>
+</p>
+
+
+
+<p>
+  <a href="/places">Back to overview of places</a>
+</p>
