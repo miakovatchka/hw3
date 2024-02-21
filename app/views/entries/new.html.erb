@@ -1,6 +1,6 @@
 <h1>New Entry</h1>
 
-<%= form_with model: @entries do |form| %>
+<%= form_with model: @entry do |form| %>
   <p>
     <%= form.label "title" %>
     <%= form.text_field "title" %>
@@ -9,6 +9,8 @@
     <%= form.label "description" %>
     <%= form.text_area "description" %>
   </p>
-  
+  <p>
+  <input type="hidden" name="place_id" id="place_id" value="<% @entry["place_id"] %>">
+  </p>
   <%= form.submit %>
 <% end %>

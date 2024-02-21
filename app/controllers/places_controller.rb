@@ -5,12 +5,11 @@ end
 
 def show
   @place = Place.find(params["id"])
-  @entries = Entry.where({"places_id" => @place["id"]})
+  @entries = Entry.where({"place_id" => @place["id"]})
 end
 
 def new 
   @place = Place.new
-  @entries = Entry.find_by({"id" => params["place_id"]})
 end
 
 def create
