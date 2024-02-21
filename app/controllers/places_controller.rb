@@ -4,13 +4,13 @@ class PlacesController < ApplicationController
 end
 
 def show
-  @entry = Entry.find_by({"id" => params["id"]})
-  @place = Place.find_by({"id" => @entries({"id" => params["id"]})
+  @place = Place.find(params["id"])
+  @entries = Entry.where({"places_id" => @place["id"]})
 end
 
 def new 
   @place = Place.new
-  @entry = Entry.find_by({"id" => params["place_id"]})
+  @entries = Entry.find_by({"id" => params["place_id"]})
 end
 
 def create
