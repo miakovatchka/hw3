@@ -1,16 +1,19 @@
-<h1>New Entry</h1>
+<h1>New Post</h1>
 
-<%= form_with model: @entry do |form| %>
-  <p>
-    <%= form.label "title" %>
-    <%= form.text_field "title" %>
-    </p>
-    <p>
-    <%= form.label "description" %>
-    <%= form.text_area "description" %>
+<form action="/entries" method="post">
+   <p>
+    <label for="title">Title</label>
+    <input type="text" name="title">
   </p>
   <p>
-  <input type="hidden" name="place_id" id="place_id" value="<% @entry["place_id"] %>">
+    <label for="description">Description</label>
+    <input type="text" name="description">
   </p>
-  <%= form.submit %>
-<% end %>
+
+  <p>
+    <label for="place_id"></label>
+    <input type="hidden" name="place_id" value="<%= @place["id"] %>">
+  </p>
+
+  <button>Submit</button>
+</form>

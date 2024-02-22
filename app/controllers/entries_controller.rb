@@ -15,3 +15,4 @@ def create
   redirect_to "/places/#{@entry["place_id"]}"
 end
 end
+
